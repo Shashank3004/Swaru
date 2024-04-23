@@ -1,0 +1,207 @@
+
+
+body{
+    
+    color:#333;
+   
+}
+
+
+.bg-lightblue {
+    background-color:rgb(32, 167, 240);
+}
+.fw-bold{
+    color:rgb(0, 0, 0);
+}
+.navbar {
+    padding-top: 10px; /* Increase top padding */
+    padding-bottom: 10px; /* Increase bottom padding */
+}
+
+.swaru3{
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+    align-items: center;
+    font-size: large;
+    gap: 5rem;
+}
+
+
+.navbar-nav .nav-link {
+    padding-top: 10px; /* Increase top padding of the links */
+    padding-bottom: 12px; /* Increase bottom padding of the links */
+}
+
+.dropdown-menu {
+    padding-top: 10px; /* Increase top padding of the dropdown menu */
+    padding-bottom: 10px; /* Increase bottom padding of the dropdown menu */
+}
+
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar appears above other content while scrolling down*/
+}
+.underline {
+    text-decoration: underline;
+}
+.container {
+    padding-top: 12px; /* Adjust this value to control the space between navbar items*/
+    padding-bottom: 5px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effect */
+    border-radius: 14px;
+}
+
+.card:hover {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); /* Change shadow effect on hover */
+    transform: scale(0.95); /* Scale down the card on hover */
+}
+
+.card img {
+    transition: transform 0.3s ease; /* Add transition effect for image */
+    border-radius: 14px;
+}
+
+.card:hover img {
+    transform: scale(0.95); /* Scale down the image on hover */
+}
+/* For FAQ*/
+.accordion-item {
+    background-color: #f9f9f9; /* Light gray background color for questions */
+    margin-bottom: 6px; /* Add some spacing between accordion items */
+    border-radius: 10px; /* Rounded corners for a softer look */
+}
+
+.accordion-body {
+    background-color: #a8b4b01f; /* White background color for answers */
+    border-top: 1px solid #0202fd; /* Add a top border for separation */
+}
+
+.accordion-item:hover {
+    background-color:#e9e9e9; /* Light gray background color on hover */
+}
+
+.accordion-item:hover .accordion-button {
+    background-color: #5b86ebce; /* Darker gray background color for the button on hover */
+}
+/* Booking Button*/
+.btn-custom-primary {
+    background-color: #f33939df; /* Change this to your desired button color */
+    border-color: #271313; /* Change this to your desired button border color */
+    color: white;
+    font-weight: bold;
+}
+
+.btn-custom-primary:hover {
+    background-color: #efd37f7a; /* Change this to your desired hover color */
+    border-color: #f4b289f2; /* Change this to your desired hover border color */
+}
+/*     */
+
+/* whatsapp*/
+.whatsapp-button{
+    position: fixed;  
+    right: 20px; 
+    bottom: 45px;
+}
+/* Arrange footer content */
+.footer {
+    background-image: url('images/footer2.img.png'); /* Replace 'your-image.png' with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 14px; */
+}
+
+.email{
+    width:40px;
+    height:40px;
+    background-size: contain;
+    
+}
+
+.mail{
+    
+    
+    gap: 20px;
+}
+
+.tele{
+    width:40px;
+    height:40px;
+    background-size: contain;
+}
+
+.phone{
+   
+    gap: 20px;
+}
+/*Alert */
+.overlay 
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 9999;
+}
+
+.alert 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 10000;
+    font-size: 30px; /* Adjust font size */
+    text-align: center; /* Center align text */
+   
+}
+
+/* Style for the button */
+.btn-ok 
+{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: block; /* Changed to block to center it */
+    margin: 10px auto; /* Center align horizontally */
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.swaru{
+    background-color: rgb(32, 167, 240);
+    border:3px solid black;
+}
+
+.swaru1{
+    color: white;
+    font-weight: bold;
+}
+
+.btn1{
+    position: relative;
+    right: 5rem;
+}
+
+.btn2{
+    position: relative;
+    right: 7rem;
+    top: 0rem;
+}
