@@ -292,10 +292,10 @@
                 // Reset the form after successful submission
                 document.getElementById('myForm').reset();
 
-                // Hide the alert after 5 seconds
+                // Hide the alert after 1 seconds
                 setTimeout(function() {
                     hideAlert();
-                }, 5000);
+                }, 1000);
             } else {
                 throw new Error('Form submission failed. Status: ' + response.status);
             }
