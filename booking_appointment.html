@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <link rel="icon" type="image/png" href="images/Icon.png">
     <title>Booking_Appointment</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -81,16 +81,16 @@
                                         <label for="doctortypeSelect" class="form-label"><b>Doctor Type<span style="color: red;">*</span></b></label>
                                         <select class="form-select" id="doctortypeSelect" aria-label="Doctor Type" name="doctortype" required>
                                             <option value="" selected>Select a Doctor </option>
-                                            <option value="Ayurveda">Ayurveda</option>
+                                            <option value="Ayurvedic">Ayurveda</option>
                                             <option value="Dentist">Dentist</option>
-                                            <option value="Dermatologist">Dermatologist</option>
+                                            <option value="Dermatologist(Skin)">Dermatologist</option>
                                             <option value="ENT">ENT</option>
                                             <option value="General Physician">General Physician</option>
                                             <option value="Gynecologist">Gynecologist</option>
                                             <option value="Homeopathy">Homeopathy</option>
-                                            <option value="Ophthalmologist">Ophthalmologist</option>
+                                            <option value="Ophthalmologist(Eye)">Ophthalmologist</option>
                                             <option value="Orthopedic Surgeon">Orthopedic Surgeon</option>
-                                            <option value="Pediatrician">Pediatrician</option>
+                                            <option value="Pediatrician(Childrens)">Pediatrician</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
@@ -219,7 +219,7 @@
                 </p>
               </div>
               <div class="col-sm-6 col-md-2">
-                <h6><b>Social Media Links</b></h6>
+                <h6><b>Follow Us</b></h6>
                 <br/>
                 <a href="https://www.instagram.com/swaru_health/" class="instagram" style="-decoration: none;">
                 <img src="images/insta.png"></a>
@@ -334,8 +334,8 @@
             else if (selectedDoctorType === "Pediatrician") 
             {         
                 // Add hospital options for Pediatrician
-                addOption(hospitalSelect, "Sri Laxmi Children's Hospital - Dr. CH.Srikanth");
-                addOption(hospitalSelect, "Nice Children's Hospital - Dr. Majaz Ahmed Khan");
+                addOption(hospitalSelect, "Sri Laxmi Childrens Hospital - Dr. CH.Srikanth");
+                addOption(hospitalSelect, "Nice Childrens Hospital - Dr. Majaz Ahmed Khan");
                 
                 // Add more hospitals specific to Pediatrician if needed
             }
