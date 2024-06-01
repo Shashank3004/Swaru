@@ -81,16 +81,16 @@
                                         <label for="doctortypeSelect" class="form-label"><b>Doctor Type<span style="color: red;">*</span></b></label>
                                         <select class="form-select" id="doctortypeSelect" aria-label="Doctor Type" name="doctortype" required>
                                             <option value="" selected>Select a Doctor </option>
-                                            <option value="Ayurvedic">Ayurveda</option>
+                                            <option value="Ayurvedic">Ayurvedic</option>
                                             <option value="Dentist">Dentist</option>
-                                            <option value="Dermatologist(Skin)">Dermatologist</option>
+                                            <option value="Dermatologist(Skin)">Dermatologist(Skin)</option>
                                             <option value="ENT">ENT</option>
                                             <option value="General Physician">General Physician</option>
                                             <option value="Gynecologist">Gynecologist</option>
                                             <option value="Homeopathy">Homeopathy</option>
-                                            <option value="Ophthalmologist(Eye)">Ophthalmologist</option>
+                                            <option value="Ophthalmologist(Eye)">Ophthalmologist(Eye)</option>
                                             <option value="Orthopedic Surgeon">Orthopedic Surgeon</option>
-                                            <option value="Pediatrician(Childrens)">Pediatrician</option>
+                                            <option value="Pediatrician(Childrens)">Pediatrician(Childrens)</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
@@ -265,7 +265,7 @@
                 addOption(hospitalSelect, "Arpitha Hospital - Dr. Karunakar");
                 addOption(hospitalSelect, "Aayuksha Hospital - Dr. Chandra Mohan");
                 
-            } else if (selectedDoctorType === "Ayurveda") {
+            } else if (selectedDoctorType === "Ayurvedic") {
                 // Add hospital options for Ayurveda
                 
                 addOption(hospitalSelect, "Shanthi Keraliya Ayurvedic Hospital - Dr. Vijay Bhaskar");
@@ -279,7 +279,7 @@
                 // Add more hospitals specific to Dentist if needed
                 
             }
-            else if (selectedDoctorType === "Dermatologist") 
+            else if (selectedDoctorType === "Dermatologist(Skin)") 
             {          
               // Add hospital options for Dermatologist
       
@@ -311,7 +311,7 @@
                
                 // Add more hospitals specific to Homeopathy if needed
             }
-            else if (selectedDoctorType === "Ophthalmologist") 
+            else if (selectedDoctorType === "Ophthalmologist(Eye)") 
             {
                     
                 // Add hospital options for Ophthalmologist
@@ -331,7 +331,7 @@
            
                 // Add more hospitals specific to Orthopedic Surgeon if needed
             }
-            else if (selectedDoctorType === "Pediatrician") 
+            else if (selectedDoctorType === "Pediatrician(Childrens)") 
             {         
                 // Add hospital options for Pediatrician
                 addOption(hospitalSelect, "Sri Laxmi Childrens Hospital - Dr. CH.Srikanth");
