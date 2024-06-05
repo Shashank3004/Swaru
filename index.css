@@ -205,3 +205,13 @@ body{
     right: 7rem;
     top: 0rem;
 }
+.search-button {
+    background-color: green;
+    border-color: green;
+    color: white; /* Text color */
+    
+}
+.search-button:hover {
+    background-color: rgb(141, 227, 141); /* Change color on hover */
+    border-color: rgb(140, 226, 140);
+}
