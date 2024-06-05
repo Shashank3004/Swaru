@@ -67,16 +67,29 @@
             </div>
         </nav>
     </header> 
+
+    
    
     <!-- Main Content -->
-    <div class="container" style="padding-top: 120px;background-color:aliceblue; border-radius: 14px;"> 
+    <div class="container mt-5" style="padding-top: 100px;background-color:aliceblue; border-radius: 14px;"> 
       <div class="row">
-          <div class="searchup">
-            <form id="searchForm" class="d-flex ms-3" role="search">
-                <input id="searchInput" class="form-control me-2" type="search" placeholder="Search Your Doctors" aria-label="Search" autocomplete="off">
-                <button class="btn btn-outline-success search-button" type="submit">Search</button>
-            </form>
-          </div>
+        <form id="searchForm" class="d-flex ms-1" role="search">
+            <input id="searchInput" class="form-control me-2" list="doctorOptions" placeholder="Search Your Doctors" aria-label="Search" autocomplete="off">
+            <datalist id="doctorOptions">
+                <option value="General Physician">
+                <option value="Dentist">
+                <option value="Gynecologist">
+                <option value="Pediatrician">
+                <option value="Ayurvedic">
+                <option value="ENT">
+                <option value="Dermatologist">
+                <option value="Homeopathy">
+                <option value="Ophthalmologist">
+                <option value="Orthopedic Surgeon">
+            </datalist>
+            <button class="btn btn-outline-success search-button" type="submit">Search</button>
+        </form>
+
           <div class="col-md-6"><br><br>
               
               <h3 class="text-center" data-aos="fade-up" data-aos-delay="600" style="color:rgba(5, 86, 121, 0.978);"><b>We Take Care of Our Patients Health<br>By Providing Best Health Services.</b></h3><br>
@@ -572,8 +585,20 @@
   </script>
   <script>
   /* search bar  */
-  document.getElementById("searchForm").addEventListener("submit", function(event) 
-  {
+  document.getElementById('searchInput').addEventListener('input', function() {
+    var input = this.value.toLowerCase();
+    var options = document.querySelectorAll('#doctorOptions option');
+    options.forEach(function(option) {
+        if(option.value.toLowerCase().startsWith(input)) {
+            option.removeAttribute('hidden');
+        } else {
+            option.setAttribute('hidden', true);
+        }
+    });
+});
+
+ document.getElementById("searchForm").addEventListener("submit", function(event) 
+{
     event.preventDefault();
     var searchQuery = document.getElementById("searchInput").value.toLowerCase();
     if (searchQuery.includes("general physician")) {
@@ -597,8 +622,8 @@
     else if (searchQuery.includes("dermatologist")) {
         window.location.href = "Dermatologist.html";
     }
-    else if (searchQuery.includes("homeopathy")) {
-        window.location.href = "Homeopathy.html";
+    else if (searchQuery.includes("homoeopathy")) {
+        window.location.href = "Homoeopathy.html";
     }
     else if (searchQuery.includes("ophthalmologist")) {
         window.location.href = "Ophthalmologist.html";
@@ -606,11 +631,12 @@
     else if (searchQuery.includes("orthopedic surgeon")) {
         window.location.href = "OrthopedicSurgeon.html";
     }
-     else {
+     else 
+    {
         // Handle other search queries or provide feedback to the user
         alert("No results found for '" + searchQuery + "'. Please try again.");
     }
-  });
+});
 
   </script>
     <!--Whatsapp-->
