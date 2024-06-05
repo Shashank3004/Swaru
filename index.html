@@ -73,22 +73,25 @@
     <!-- Main Content -->
     <div class="container mt-5" style="padding-top: 100px;background-color:aliceblue; border-radius: 14px;"> 
       <div class="row">
-        <form id="searchForm" class="d-flex ms-1" role="search">
-            <input id="searchInput" class="form-control me-2" list="doctorOptions" placeholder="Search Your Doctors" aria-label="Search" autocomplete="off">
-            <datalist id="doctorOptions">
-                <option value="General Physician">
-                <option value="Dentist">
-                <option value="Gynecologist">
-                <option value="Pediatrician">
-                <option value="Ayurvedic">
-                <option value="ENT">
-                <option value="Dermatologist">
-                <option value="Homeopathy">
-                <option value="Ophthalmologist">
-                <option value="Orthopedic Surgeon">
-            </datalist>
-            <button class="btn btn-outline-success search-button" type="submit">Search</button>
-        </form>
+        <div class="form-group">
+            <div class="d-flex align-items-center">
+                <select class="form-select me-2" id="doctortypeSelect" aria-label="Doctor Type" name="doctortype" required onchange="redirectPage()">
+                    <option value="" selected>Select a Doctor</option>
+                    <option value="Ayurvedic">Ayurvedic</option>
+                    <option value="Dentist">Dentist</option>
+                    <option value="Dermatologist(Skin)">Dermatologist(Skin)</option>
+                    <option value="ENT">ENT</option>
+                    <option value="General Physician">General Physician</option>
+                    <option value="Gynecologist">Gynecologist</option>
+                    <option value="Homeopathy">Homeopathy</option>
+                    <option value="Ophthalmologist(Eye)">Ophthalmologist(Eye)</option>
+                    <option value="Orthopedic Surgeon">Orthopedic Surgeon</option>
+                    <option value="Pediatrician(Childrens)">Pediatrician(Childrens)</option>
+                </select>
+                <button class="btn btn-outline-success" type="button" onclick="searchDoctors()">Search</button>
+            </div>
+        </div>
+        
 
           <div class="col-md-6"><br><br>
               
@@ -583,62 +586,53 @@
     // Start auto-advancing the carousel
     autoAdvance();
   </script>
-  <script>
-  /* search bar  */
-  document.getElementById('searchInput').addEventListener('input', function() {
-    var input = this.value.toLowerCase();
-    var options = document.querySelectorAll('#doctorOptions option');
-    options.forEach(function(option) {
-        if(option.value.toLowerCase().startsWith(input)) {
-            option.removeAttribute('hidden');
-        } else {
-            option.setAttribute('hidden', true);
+ <script>
+    function redirectPage() {
+        var selectedDoctor = document.getElementById("doctortypeSelect").value;
+        switch(selectedDoctor) {
+            case "Ayurvedic":
+                window.location.href = "ayurvedic.html";
+                break;
+            case "Dentist":
+                window.location.href = "dentist.html";
+                break;    
+            case "Dermatologist(Skin)":
+                window.location.href = "Dermatologist.html";
+                break;
+            case "ENT":
+                window.location.href = "ENT.html";
+                break;
+            case "General Physician":
+                window.location.href = "GeneralPhysician.html";
+                break;
+            case "Gynecologist":
+                window.location.href = "Gynecologist.html";
+                break;
+            case "Homeopathy":
+                window.location.href = "Homoeopathy.html";
+                break;
+            case "Ophthalmologist(Eye)":
+                window.location.href = "Ophthalmologist.html";
+                break;
+            case "Orthopedic Surgeon":
+                window.location.href = "OrthopedicSurgeon.html";
+                break;
+            case "Pediatrician(Childrens)":
+                window.location.href = "Pediatrician.html";
+                break;                            
+            // Add more cases for other options if needed
+            default:
+                break;
         }
-    });
-});
-
- document.getElementById("searchForm").addEventListener("submit", function(event) 
-{
-    event.preventDefault();
-    var searchQuery = document.getElementById("searchInput").value.toLowerCase();
-    if (searchQuery.includes("general physician")) {
-        window.location.href = "GeneralPhysician.html";
     }
-    else if (searchQuery.includes("dentist")) {
-        window.location.href = "Dentist.html";
-    }
-    else if (searchQuery.includes("gynecologist")) {
-        window.location.href = "Gynecologist.html";
-    }
-    else if (searchQuery.includes("pediatrician")) {
-        window.location.href = "Pediatrician.html";
-    }
-    else if (searchQuery.includes("ayurvedic")) {
-        window.location.href = "Ayurvedic.html";
-    }
-    else if (searchQuery.includes("ent")) {
-        window.location.href = "ENT.html";
-    }
-    else if (searchQuery.includes("dermatologist")) {
-        window.location.href = "Dermatologist.html";
-    }
-    else if (searchQuery.includes("homoeopathy")) {
-        window.location.href = "Homoeopathy.html";
-    }
-    else if (searchQuery.includes("ophthalmologist")) {
-        window.location.href = "Ophthalmologist.html";
-    }
-    else if (searchQuery.includes("orthopedic surgeon")) {
-        window.location.href = "OrthopedicSurgeon.html";
-    }
-     else 
-    {
-        // Handle other search queries or provide feedback to the user
+    
+    function searchDoctors() {
+        // Add functionality for searching doctors here
+        // For now, you can alert a message
         alert("No results found for '" + searchQuery + "'. Please try again.");
     }
-});
-
-  </script>
+ </script>
+  
     <!--Whatsapp-->
     <a href="https://api.whatsapp.com/send?phone=7674918100&text=Hello " class="whatsapp-button" target="_blank" style="position: fixed;  right: 15px; bottom: 15px;">
         <img src="https://i.ibb.co/VgSspjY/whatsapp-button.png" alt="whatsapp">
